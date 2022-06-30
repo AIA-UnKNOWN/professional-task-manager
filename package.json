@@ -1,0 +1,29 @@
+{
+  "name": "task-manager-api",
+  "version": "1.0.0",
+  "description": "APIs for task manager app",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon"
+  },
+  "_moduleAliases": {
+    "@env": "./env.js",
+    "@controllers": "./src/controllers",
+    "@middlewares": "./src/middlewares",
+    "@models": "./src/models",
+    "@routes": "./src/routes"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "install": "^0.13.0",
+    "module-alias": "^2.2.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.21.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  }
+}
