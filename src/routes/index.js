@@ -1,4 +1,4 @@
-const Project = require('@models/Project');
+const projectRoutes = require('./Project');
 
 const registerRoutes = app => {
 
@@ -11,6 +11,8 @@ const registerRoutes = app => {
   app.get('/test', (req, res) => {
     res.send('test');
   });
+
+  projectRoutes(app);
 
 }
 
