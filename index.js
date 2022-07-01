@@ -6,6 +6,8 @@ const PORT = 3000;
 const registerRoutes = require('@routes');
 const { initializeDatabase } = require('@models');
 
+app.use(express.json());
+
 initializeDatabase();
 registerRoutes(app);
 
