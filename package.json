@@ -21,7 +21,8 @@
     "install": "^0.13.0",
     "module-alias": "^2.2.2",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.21.1"
+    "sequelize": "^6.21.1",
+    "sequelize-cli": "^6.4.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.18"
