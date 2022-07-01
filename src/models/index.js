@@ -5,6 +5,7 @@ let sequelize = new Sequelize(database.database, database.user, database.passwor
   host: database.host,
   dialect: database.dialect
 });
+
 const initializeDatabase = async () => {
   try {
     await sequelize.authenticate();
@@ -12,7 +13,12 @@ const initializeDatabase = async () => {
   } catch (error) {
     console.error('Unable to connect to the database:', error);
   }
+
+  await sequelize.sync();
+  console.log('All models were synchronized!');
 }
 
-exports.connection = sequelize;
-module.exports = initializeDatabase;
+module.exports = {
+  initializeDatabase,
+  sequelize
+};

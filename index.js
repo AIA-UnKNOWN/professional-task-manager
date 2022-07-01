@@ -4,7 +4,7 @@ const app = express();
 const PORT = 3000;
 
 const registerRoutes = require('@routes');
-const initializeDatabase = require('@models');
+const { initializeDatabase } = require('@models');
 
 initializeDatabase();
 registerRoutes(app);
