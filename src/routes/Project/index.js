@@ -6,6 +6,7 @@ const projectRoutes = app => {
   app.get('/project/:projectId', Project.findOneController);
   app.post('/project/create', Project.createController);
   app.delete('/project/:projectId/delete', Project.deleteController);
+  app.put('/project/:projectId/update', Project.updateController);
 }
 
 module.exports = projectRoutes;
