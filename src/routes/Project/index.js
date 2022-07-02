@@ -1,21 +1,8 @@
-const Project = require('@models/Project');
+const Project = require('@controllers/Project');
 
 const projectRoutes = app => {
-
-  app.post('/project/create', async (req, res) => {
-    const { name } = req.body;
-    try {
-      const project = await Project.create({ name });
-      res.status(201).json({
-        message: 'Project created successfully'
-      });
-    } catch(error) {
-      res.status(500).json({
-        message: 'Project creation failed: ' + error
-      });
-    }
-  });
-
+  /* Add your routes here */
+  app.post('/project/create', Project.createController);
 }
 
 module.exports = projectRoutes;
