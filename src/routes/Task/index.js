@@ -6,6 +6,7 @@ const taskRoutes = app => {
   app.get('/task/:taskId', Task.findOneController);
   app.post('/task/create', Task.createController);
   app.put('/task/:taskId/update', Task.updateController);
+  app.delete('/task/:taskId/delete', Task.deleteController);
 }
 
 module.exports = taskRoutes;
