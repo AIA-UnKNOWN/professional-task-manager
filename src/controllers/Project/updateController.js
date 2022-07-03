@@ -3,7 +3,7 @@ const Project = require('@models/Project');
 const updateController = async (req, res) => {
   try {
     await Project.update({ name: req.body.name }, {
-      where: { id: req.body.projectId }
+      where: { id: req.params.projectId }
     });
     res.sendStatus(200);
   } catch(error) {
