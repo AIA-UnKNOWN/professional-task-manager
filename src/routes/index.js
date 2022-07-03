@@ -1,5 +1,6 @@
 const projectRoutes = require('./Project');
 const taskRoutes = require('./Task');
+const labelRoutes = require('./Label');
 
 const registerRoutes = app => {
 
@@ -15,6 +16,7 @@ const registerRoutes = app => {
 
   projectRoutes(app);
   taskRoutes(app);
+  labelRoutes(app);
 
 }
 
