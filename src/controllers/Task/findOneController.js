@@ -1,4 +1,4 @@
-const Task = require('@models/Task');
+const Task = require('@models/task');
 
 const findOneController = async (req, res) => {
   try {

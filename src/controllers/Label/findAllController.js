@@ -1,4 +1,4 @@
-const Label = require('@models/Label');
+const Label = require('@models/label');
 
 const findAllController = async (req, res) => {
   try {

@@ -1,4 +1,4 @@
-const Project = require('@models/Project');
+const Project = require('@models/project');
 
 const deleteController = async (req, res) => {
   try {
