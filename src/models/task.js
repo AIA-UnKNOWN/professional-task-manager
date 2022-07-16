@@ -42,7 +42,10 @@ module.exports = (sequelize, DataTypes) => {
     },
     title: DataTypes.STRING,
     description: DataTypes.STRING,
-    is_completed: DataTypes.BOOLEAN
+    is_completed: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    }
   }, {
     sequelize,
     modelName: 'Task',
