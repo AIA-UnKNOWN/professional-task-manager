@@ -1,4 +1,4 @@
-const Project = require('@models/project');
+const { Project } = require('@models');
 
 const createController = async (req, res) => {
   const { name } = req.body;
