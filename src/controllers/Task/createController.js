@@ -1,4 +1,4 @@
-const Task = require('@models/task');
+const { Task } = require('@models');
 
 const createController = async (req, res) => {
   const { title, description, project_id, label_id, priority_id } = req.body;
