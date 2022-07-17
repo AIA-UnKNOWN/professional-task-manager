@@ -1,4 +1,4 @@
-const Label = require('@models/label');
+const { Label } = require('@models');
 
 const deleteController = async (req, res) => {
   try {
