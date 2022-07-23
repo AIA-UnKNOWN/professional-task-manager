@@ -6,7 +6,7 @@ const updateController = async (req, res) => {
     await Task.update({
       title: req.body.title || task.title,
       description: req.body.description || task.description,
-      is_completed: req.body.is_completed || task.is_completed,
+      is_completed: req.body.is_completed,
       label_id: req.body.label_id || task.label_id,
       priority_id: req.body.priority_id || task.priority_id,
     }, {
