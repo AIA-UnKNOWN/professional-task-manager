@@ -6,7 +6,10 @@ const findAllController = async (req, res) => {
     const tasks = await Task.findAll({
       where: {
         project_id: req.query.projectId
-      }
+      },
+      order: [
+        ['createdAt', 'DESC']
+      ]
     });
     res.status(200).json(tasks);
   } catch(error) {
