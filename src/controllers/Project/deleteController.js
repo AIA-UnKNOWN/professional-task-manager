@@ -7,7 +7,7 @@ const deleteController = async (req, res) => {
     });
     res.sendStatus(200);
   } catch(error) {
-    res.send(500).json({
+    res.status(500).json({
       message: `Project deletion error: ${error}`
     });
   }
