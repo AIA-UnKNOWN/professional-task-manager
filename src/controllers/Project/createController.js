@@ -5,7 +5,8 @@ const createController = async (req, res) => {
   try {
     const project = await Project.create({ name });
     res.status(201).json({
-      message: 'Project created successfully'
+      message: 'Project created successfully',
+      createdProject: project,
     });
   } catch(error) {
     res.status(500).json({
