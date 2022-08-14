@@ -6,13 +6,20 @@ const Priority = require('@models/priority');
 
 module.exports = (sequelize, DataTypes) => {
   class Task extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
     static associate(models) {
-      // define association here
+      const { Project, Task, Priority, Label } = models;
+      Task.belongsTo(Project, {
+        foreignKey: 'project_id',
+        sourceKey: 'id',
+      });
+      Task.belongsTo(Priority, {
+        foreignKey: 'priority_id',
+        sourceKey: 'id',
+      });
+      Task.belongsTo(Label, {
+        foreignKey: 'label_id',
+        sourceKey: 'id',
+      })
     }
   }
   Task.init({

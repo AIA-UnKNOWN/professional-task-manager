@@ -1,4 +1,5 @@
 'use strict';
+
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Tasks', {
@@ -9,13 +10,34 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       project_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: "Projects",
+          id: 'key',
+          deferrable: Sequelize.Deferrable.INITIALLY_IMMEDIATE,
+        },
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE',
       },
       label_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: "Labels",
+          id: 'key',
+          deferrable: Sequelize.Deferrable.INITIALLY_IMMEDIATE,
+        },
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE',
       },
       priority_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: "Priorities",
+          id: 'key',
+          deferrable: Sequelize.Deferrable.INITIALLY_IMMEDIATE,
+        },
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE',
       },
       title: {
         type: Sequelize.STRING
