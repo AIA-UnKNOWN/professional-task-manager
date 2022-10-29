@@ -1,5 +1,5 @@
 services:
-  professional-task-manager-client:
+  professional-task-manager-api:
     image: professional-task-manager-api-image
     container_name: task-manager-api
     ports:
