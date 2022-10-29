@@ -14,5 +14,8 @@ module.exports = {\
   },\
 }" >> env.js
 RUN npm install
+WORKDIR src
+RUN npx sequelize db:migrate
+WORKDIR ../
 
 CMD ["npm", "run", "dev"]

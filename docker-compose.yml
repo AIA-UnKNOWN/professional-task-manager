@@ -1,7 +1,7 @@
 services:
   professional-task-manager-client:
-    image: professional-task-manager-client-image
-    container_name: task-manager-client
+    image: professional-task-manager-api-image
+    container_name: task-manager-api
     ports:
       - 8888:3000
     volumes:
