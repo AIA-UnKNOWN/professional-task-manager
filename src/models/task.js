@@ -48,7 +48,7 @@ module.exports = (sequelize, DataTypes) => {
       }
     },
     title: DataTypes.STRING,
-    description: DataTypes.STRING,
+    description: DataTypes.TEXT('long'),
     is_completed: {
       type: DataTypes.BOOLEAN,
       defaultValue: false
