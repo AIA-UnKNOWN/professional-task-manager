@@ -9,6 +9,7 @@ const updateController = async (req, res) => {
       is_completed: req.body.is_completed,
       label_id: req.body.label_id || task.label_id,
       priority_id: req.body.priority_id || task.priority_id,
+      project_id: req.body.project_id || task.project_id,
     }, {
       where: { id: req.params.taskId }
     });
