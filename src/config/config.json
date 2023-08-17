@@ -2,8 +2,9 @@
   "development": {
     "username": "root",
     "password": "AjboyIan_321",
-    "database": "task_manager",
+    "database": "ptm",
     "host": "172.17.0.1",
+    "port": "3307",
     "dialect": "mysql"
   },
   "test": {
