@@ -2,7 +2,7 @@ services:
   mysql:
     image: mysql:8.0
     ports:
-      - 3307:3306
+      - 3306:3306
     volumes:
       - ptm-mysql-data:/var/lib/mysql
     environment:
@@ -20,7 +20,7 @@ services:
     environment:
       NODE_ENV: "development"
       DATABASE_HOST: mysql
-      DATABASE_PORT: 3307
+      DATABASE_PORT: 3306
       DATABASE_USERNAME: root
       DATABASE_PASSWORD: AjboyIan_321
       DATABASE_NAME: ptm
